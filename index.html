@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mech Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game" width="960" height="600"></canvas>
+
+    <div id="hud">
+      <div id="health-bar-wrap">
+        <div id="health-label">HULL</div>
+        <div id="health-bar"><div id="health-fill"></div></div>
+        <span id="health-text">100</span>
+      </div>
+      <div id="score">SCORE: <span id="score-value">0</span></div>
+      <div id="wave">WAVE: <span id="wave-value">1</span></div>
+    </div>
+
+    <div id="start-screen">
+      <h1>MECH ARENA</h1>
+      <p>Pilot your mech. Survive the waves.</p>
+      <p class="controls">
+        WASD / Arrows — Move<br>
+        Mouse — Aim<br>
+        Click / Hold — Fire
+      </p>
+      <button id="start-btn">DEPLOY</button>
+    </div>
+
+    <div id="game-over-screen" class="hidden">
+      <h2>MECH DESTROYED</h2>
+      <p>Final Score: <span id="final-score">0</span></p>
+      <button id="restart-btn">REDEPLOY</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
